@@ -17,6 +17,12 @@ pipeline {
                 script {
                     bat 'java helloworld'  // Run the compiled HelloWorld class
                 }
+        stage('Trigger Another Job') {
+            steps {
+                script {
+                    // Trigger another Jenkins pipeline / job
+                    build job: 'jenkins', wait: false
+                }
             }
         }
     }
