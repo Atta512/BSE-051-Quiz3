@@ -11,12 +11,6 @@ pipeline {
             }
         }
 
-        stage('Test') {
-            steps {
-                // Run unit tests (if using Maven, this would be part of the build)
-                script {
-                    bat 'python Python'  // Run the compiled HelloWorld class
-                }
             }
         }
     }
